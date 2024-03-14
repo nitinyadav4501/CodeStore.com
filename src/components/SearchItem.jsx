@@ -15,10 +15,8 @@ function SearchItem() {
     <div className=" bg-gray-200">
       <div
         className={`${
-          state.isLoading
-            ? "flex justify-center items-center"
-            : "grid grid-cols-4 place-items-center gap-y-8 py-12 px-32"
-        } min-h-[90vh]`}
+          state.isLoading ? "flex" : "flex-wrap"
+        } justify-center items-center flex gap-y-8 gap-x-10 py-12 px-32 min-h-[90vh]`}
       >
         {state.isLoading ? (
           <Loader />
@@ -32,7 +30,6 @@ function SearchItem() {
           })
         )}
       </div>
-      
     </div>
   );
 }
